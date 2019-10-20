@@ -1,4 +1,4 @@
-#Kriti-2019
+# Kriti-2019
 This is source code of a Website aimed for students of IIT Guwahati for simplifying the access of required study material in thier day to day life.
 
 Following are the main highlights of the website:
