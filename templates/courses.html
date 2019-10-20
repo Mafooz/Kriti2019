@@ -1,0 +1,46 @@
+{% extends 'header.html' %}
+{% block stylesheet %}
+    <style>
+        .text-center{
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+        body{
+            background: url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .table-striped{
+            background-color: rgba(75, 243, 215, 0.37);
+        }
+        thead{
+            background-color: rgba(36, 236, 17, 0.836);
+        }
+    </style>
+    {% endblock %}
+
+  {% block content %}
+    <div class="container">
+        <div class="text-center">
+            <h1>Here are the courses we have found for you...</h1>
+        </div>
+        <table class="table table-striped">
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Hosted By</th>
+                  <th>link</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for courses in course %}
+              <tr>
+                  <td>{{courses.name}}</td>
+                  <td>{{clubname}}</td>
+                  <td><a href="{% url 'playcourse' clubname courses.pk '#' %}" > Click to View </a></td>
+              </tr>
+      {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}

@@ -1,0 +1,25 @@
+h1{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.modules {
+    background-color: rgb(252, 186, 45);
+}
+.video-player {
+    border: 2px solid purple;
+}
+#list-tab {
+    overflow-y: scroll;
+    height: 450px;
+}
+body {
+    background-image: linear-gradient(to right, rgba(101, 219, 146, 0.527), rgba(34, 212, 203, 0.781)); 
+    background-image: radial-gradient(rgba(169, 230, 238, 0.952), rgba(147, 146, 226, 0.897));
+}
+
+.list-group-item-action {
+    background-color: rgb(43, 211, 147)
+}
+.list-group-item-action.active {
+    background-color: rgba(13, 77, 10, 0.774)
+}

@@ -1,0 +1,85 @@
+
+<!-- ........... header part representing navbar............ -->
+<!-- <html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    <style>
+        .text-center{
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+        body{
+            background: url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .table-striped{
+            background-color: rgba(75, 243, 215, 0.37);
+        }
+        thead{
+            background-color: rgba(36, 236, 17, 0.836);
+        }
+    </style>
+    </head>
+<body> -->
+{% extends 'header.html' %}
+{% block stylesheet %} 
+    <style>
+        .text-center{
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+        body{
+            background: url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .table-striped{
+            background-color: rgba(75, 243, 215, 0.37);
+        }
+        thead{
+            background-color: rgba(36, 236, 17, 0.836);
+        }
+    </style>
+{% endblock %}
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  {% block content %}
+        <div class="container">
+        <div class="text-center">
+            <h1>Here are the books we have found for you...</h1>
+        </div>
+        <table class="table table-striped">
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Uploaded by</th>
+                  <th>link</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for book in books %}
+            {% if book.is_approved == True %}
+              <tr>
+                  <td>{{book.name}}</td>
+                  <td>{{book.uploaded_by}}</td>
+                  <td><a href="http://localhost:8000/files/{{book.file}}" > Click to View </a></td>
+              </tr>
+        {% endif%}
+      {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
+
+
+
+    
+   

@@ -1,0 +1,320 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>E-LEARN</title>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+<link type="text/css" rel="stylesheet" href="https://colorlib.com/etc/creative-agency/css/bootstrap.min.css" />
+
+<link type="text/css" rel="stylesheet" href="https://colorlib.com/etc/creative-agency/css/owl.carousel.css" />
+<link type="text/css" rel="stylesheet" href="https://colorlib.com/etc/creative-agency/css/owl.theme.default.css" />
+
+<link type="text/css" rel="stylesheet" href="https://colorlib.com/etc/creative-agency/css/magnific-popup.css" />
+
+<link rel="stylesheet" href="https://colorlib.com/etc/creative-agency/css/font-awesome.min.css">
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/mainpage.css' %}" />
+
+
+<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<header id="home">
+
+<div class="bg-img" style="background-image: url('https://colorlib.com/etc/creative-agency/img/background1.jpg');">
+<div class="overlay"></div>
+</div>
+
+
+<nav id="nav" class="navbar nav-transparent">
+<div class="container">
+<div class="navbar-header">
+
+<div class="navbar-brand">
+<a class="display-inline" href="{%url 'home' %}">
+    <h3 id="title">
+        E-LEARN
+    </h3>
+</a>
+</div>
+
+
+<div class="nav-collapse">
+<span></span>
+</div>
+
+</div>
+
+<ul class="main-nav nav navbar-nav navbar-right">
+
+<li class="has-dropdown"><a href="#">Add Course</a>
+<ul class="dropdown">
+<li><a href="/admin">Add as an Admin</a></li>
+<li><a href="{% url 'verifyourself' %}">Upload Book As A Student</a></li>
+<li><a href="{% url 'recommend' %}">Recommend For A New Course</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</nav>
+
+
+<div class="home-wrapper">
+<div class="container">
+<div class="row">
+
+<div class="col-md-10 col-md-offset-1">
+<div class="home-content">
+<h1 class="white-text">LEARN ANYTHING ONLINE</h1>
+<p class="white-text">
+    Learn any course you want of any club or any department just with a single click
+</p>
+<a href="{% url 'select' %}"><button class="white-btn">Search Courses</button></a>
+<a href="{% url 'books' %}"><button class="main-btn">Books Collection</button></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</header>
+
+
+<div id="about" class="section md-padding">
+
+<div class="container">
+
+<div class="row">
+
+<div class="section-header text-center">
+<h2 class="title">Explore Our Features</h2>
+</div>
+
+
+<div class="col-md-4">
+<div class="about">
+<i class="fa fa-cogs"></i>
+<h3>Fully Customizible</h3>
+<p>Customize your course by seaching the form through the precise filters and enjoy the content in the way you need...</p><br />
+<a href="{% url 'select' %}">Let's go!!!</a>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="about">
+<i class="fa fa-magic"></i>
+<h3>Sharing made easy</h3>
+<p>You can always share course content like pdfs, scanned class notes, and even books to... which would help your friends a lot...</p>
+<a href="{% url 'books' %}">Share Content</a>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="about">
+<i class="fa fa-mobile"></i>
+<h3>Recommend for new course</h3>
+<p>Haven't found the course you need..? Don't worry.. Just try recommending the courses here so that they can be added by the admin</p>
+<a href="{% url 'recommend' %}">Recommend Course</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id="features" class="section md-padding bg-grey">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="section-header">
+<h2 class="title">The E-Course System</h2>
+</div>
+<p>This is an Online E-Learning Platform created for students of IIT Guwahati where they can get all the necessary material.</p>
+<div class="feature">
+<i class="fa fa-check"></i>
+<p>Courses can be accessed by everyone!</p>
+</div>
+<div class="feature">
+<i class="fa fa-check"></i>
+<p>For Sharing notes, user has to verify that he/she is student of IIT Guwahati for which an OTP will be sent to user's Outlook Credentials.</p>
+</div>
+<div class="feature">
+<i class="fa fa-check"></i>
+<p>User can share notes and books in form of PDF which make this platform more helpful for students.</p>
+</div>
+<div class="feature">
+<i class="fa fa-check"></i>
+<p>User can also recommend to include some course which will be done by suitable admin based on recommendation.</p>
+</div>
+</div>
+
+
+<div class="col-md-6">
+    <img src="https://mondrian.mashable.com/uploads%252Fcard%252Fimage%252F833455%252F5fc3da8c-5dd0-4d02-864f-746289abe608.jpg%252F950x534__filters%253Aquality%252880%2529.jpg?signature=TGrb4w_U9WJVVEknTP1GLRdB7g0&source=https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com&fbclid=IwAR3ZWY-36KaSZQxtIgTSey4TTipYH6rr2T05I-Zapp1YXReF-uO3CtkRrqI" alt="">
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id="team" class="section md-padding">
+
+<div class="container">
+
+<div class="row">
+
+<div class="section-header text-center">
+<h2 class="title">Our Admins</h2>
+</div>
+
+<div class="col-sm-3">
+<div class="team">
+<div class="team-img">
+<img class="img-responsive" src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/71971061_2290781177715850_1345882445207044096_n.jpg?_nc_cat=111&_nc_oc=AQloWgDkvYGeq5vVKmC4Jgxs_UqP-5so4zzRWAKe-FEJVhwaWlUg4nL2Zpq_N_lqACc&_nc_ht=scontent.fdel29-1.fna&oh=687e7689567964585290aaf72786b782&oe=5E1EC6B5" alt="">
+<div class="overlay">
+<div class="team-social">
+<a href="https://www.facebook.com/lavish.gulati"><i class="fa fa-facebook"></i></a>
+</div>
+</div>
+</div>
+<div class="team-content">
+<h3>Lavish Gulati</h3>
+<span>Coding Club Secretary</span>
+</div>
+</div>
+</div>
+
+<div class="col-sm-3">
+<div class="team">
+<div class="team-img">
+<img class="img-responsive" src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/555867_100312443450047_427011083_n.jpg?_nc_cat=104&_nc_oc=AQlnJOPLemQ7D_S65KKxnFVdzilCO9eE0zZV9MHnmmw-NXpBFrVYP_phnJslsMCy8CM&_nc_ht=scontent.fdel29-1.fna&oh=cc1d9b532be00a3c023897db3327cadd&oe=5E5E4C82" alt="">
+<div class="overlay">
+<div class="team-social">
+<a href="https://www.facebook.com/manik.mittal.980"><i class="fa fa-facebook"></i></a>
+</div>
+</div>
+</div>
+<div class="team-content">
+<h3>Manik Mittal</h3>
+<span>Aeromodelling Club Secretary</span>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-3">
+<div class="team">
+<div class="team-img">
+<img class="img-responsive" src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/10405519_968716613211184_962950827676131694_n.jpg?_nc_cat=104&_nc_oc=AQnVf75umEgtGoXIbhszUZYtQaWdWxU1cGtmG3kldsUd9j_X0DnIO-S96queySDRbIc&_nc_ht=scontent.fdel29-1.fna&oh=a8ca48b29d3cd40f73df4f46f1dfcaf8&oe=5E2755A2" alt="">
+<div class="overlay">
+<div class="team-social">
+<a href="https://www.facebook.com/sarvesh.choushetti"><i class="fa fa-facebook"></i></a>
+</div>
+</div>
+</div>
+<div class="team-content">
+<h3>Sarvesh Chousetti</h3>
+<span>Quiz Club Secretary</span>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-3">
+<div class="team">
+<div class="team-img">
+<img class="img-responsive" src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/49303411_2188994331162406_2769184437588459520_n.jpg?_nc_cat=104&_nc_oc=AQl07757rPm4pDWIW2oZRhruq1Ni6H-C3PFdd-63oGefyuYIcGBc6zonRU882kE62MQ&_nc_ht=scontent.fdel29-1.fna&oh=9cfcc44f33a49db6df9045ee6f35ce90&oe=5E26D965" alt="">
+<div class="overlay">
+<div class="team-social">
+<a href="https://www.facebook.com/profile.php?id=100001555815040&ref=br_rs"><i class="fa fa-facebook"></i></a>
+</div>
+</div>
+</div>
+<div class="team-content">
+<h3>Utkarsh Mishra</h3>
+<span>E-Cell Secretary</span>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<footer id="footer" class="sm-padding bg-dark">
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-12">
+
+<div class="footer-logo">
+    <img class="iitglogo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/1200px-IIT_Guwahati_Logo.svg.png" alt="logo">
+    <h4 class="text-center white-text">IIT Guwahati</h4>
+</div>
+
+
+
+
+
+<div class="footer-copyright">
+<p>Copyright © 2019. All Rights Reserved. Designed by <a href="https://www.facebook.com/groups/265927373420342/" target="_blank">Team Brahma</a></p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</footer>
+
+
+<div id="back-to-top"></div>
+
+
+<div id="preloader">
+<div class="preloader">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+
+
+<script data-cfasync="false" src="https://colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="c3fbf17163235a2cc411feba-text/javascript" src="https://colorlib.com/etc/creative-agency/js/jquery.min.js"></script>
+<script type="c3fbf17163235a2cc411feba-text/javascript" src="https://colorlib.com/etc/creative-agency/js/bootstrap.min.js"></script>
+<script type="c3fbf17163235a2cc411feba-text/javascript" src="https://colorlib.com/etc/creative-agency/js/owl.carousel.min.js"></script>
+<script type="c3fbf17163235a2cc411feba-text/javascript" src="https://colorlib.com/etc/creative-agency/js/jquery.magnific-popup.js"></script>
+<script type="c3fbf17163235a2cc411feba-text/javascript" src="https://colorlib.com/etc/creative-agency/js/main.js"></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="c3fbf17163235a2cc411feba-|49" defer=""></script></body>
+</html>
